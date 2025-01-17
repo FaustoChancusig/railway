@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile-Max</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Toggle Modo Oscuro</title>
+    <style>
+      /* Estilos generales */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        transition: background-color 0.5s, color 0.5s;
+      }
+  
+      /* Tema claro */
+      body.light-mode {
+        background-color: #ffffff; /* Fondo blanco */
+        color: #000000; /* Texto negro */
+      }
+  
+      /* Tema oscuro */
+      body.dark-mode {
+        background-color: #121212; /* Fondo oscuro */
+        color: #ffffff; /* Texto blanco */
+      }
+  
+      /* Toggle switch */
+      .toggle-container {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+      }
+  
+      .toggle-label {
+        margin-right: 10px;
+        font-size: 16px;
+      }
+  
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 25px;
+      }
+  
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+  
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 25px;
+      }
+  
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 5px;
+        bottom: 2.5px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+  
+      input:checked + .slider {
+        background-color: #2196F3;
+      }
+  
+      input:checked + .slider:before {
+        transform: translateX(24px);
+      }
+    </style>
+  </head>
+  <body class="light-mode">
+    <div class="toggle-container">
+      <label class="toggle-label">Modo Oscuro</label>
+      <label class="toggle-switch">
+        <input type="checkbox" id="mode-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">MobileMax</a>
+            
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="menu.png" alt="menu" class="menu-i">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/celulares.html">Celulares</a></li>
+                    <li><a href="pages/tablets.html">Tablets</a></li>
+                    <li><a href="pages/gatgets.html">Gadgets</a></li>
+                    <li><a href="pages/nosotros.html">Nosotros</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth">
+                <a href="pages/login.html" class="btn">Iniciar Sesión</a>
+                <a href="">  &nbsp;&nbsp;&nbsp;&nbsp; </a>
+                <a href="pages/registro.html" class="btn">Registrarse</a>
+            </div>
+            
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="car.svg" id="img-carrito" alt="carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            
+        </div>
+
+            
+        <div class="header-content container">
+            <div class="header-img">
+                <img src="imagenes/img1.png" alt="">
+            </div>
+            <div class="header-txt">
+                <h1>Ofertas especiales</h1>
+                <p>Estrena los mejores productos del mercado</p>
+
+            </div>
+        </div>
+    </header>    
+
+
+    <section class="ofert container">
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="imagenes/img2.png" alt="">
+            </div>
+            <div class="ofert-txt">
+                <h3>Samsung s23</h3>
+                <a href="#" class="btn-2">Información</a>
+            </div>
+        </div>
+
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="imagenes/img2.png" alt="">
+            </div>
+            <div class="ofert-txt">
+                <h3>Samsung S24</h3>
+                <a href="#" class="btn-2">Información</a>
+            </div>
+        </div>
+
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="imagenes/Celulares/Apple/Apple iPhone 14 Pro.jpg" alt="">
+            </div>
+            <div class="ofert-txt">
+                <h3>Iphone 14 pro</h3>
+                <a href="#" class="btn-2">Información</a>
+            </div>
+        </div>
+
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="imagenes/Celulares/Google/Google Pixel 7 Pro.jpg" alt="">
+            </div>
+            <div class="ofert-txt">
+                <h3>Pixel 9</h3>
+                <a href="#" class="btn-2">Información</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="products container" id="lista-1">
+        <h2>Productos</h2>
+        <div class="product-content">
+            <div class="product">
+                <img src="imagenes/Celulares/Samsung/Samsung Galaxy S22.jpg" alt="">
+                <div class=product-txt>
+                    <h3>Samsung</h3>
+                    <p>Ultima generacion</p>
+                    <p class="precio">$1200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="imagenes/Celulares/Xiaomi/xiaomi 13.jpg" alt="">
+                <div class=product-txt>
+                    <h3>Samsung</h3>
+                    <p>Ultima generacion</p>
+                    <p class="precio">$1200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="imagenes/Celulares/Apple/iphone 14.jpeg" alt="">
+                <div class=product-txt>
+                    <h3>Samsung</h3>
+                    <p>Ultima generacion</p>
+                    <p class="precio">$1200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="imagenes/Celulares/Apple/macbook 14.jpg" alt="">
+                <div class=product-txt>
+                    <h3>Samsung</h3>
+                    <p>Ultima generacion</p>
+                    <p class="precio">$1200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="imagenes/Celulares/Samsung/Samsung Galaxy S22.jpg" alt="">
+                <div class=product-txt>
+                    <h3>Samsung</h3>
+                    <p>Ultima generacion</p>
+                    <p class="precio">$1200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="imagenes/Celulares/Google/Google pixel 9.jpeg" alt="">
+                <div class=product-txt>
+                    <h3>Samsung</h3>
+                    <p>Ultima generacion</p>
+                    <p class="precio">$1200</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Sección de imágenes en movimiento continuo -->
+    <section class="image-slider">
+        <div class="slider-container">
+            <!-- Primera serie de imágenes -->
+            <img src="imagenes/celulares_promocion/iphone.jpg" alt="Imagen 1">
+            <img src="imagenes/Celulares/Samsung/Samsung Galaxy Watch 6.jpg" alt="Imagen 2">
+            <img src="imagenes/Celulares/Google/Google Pixel Watch.jpg" alt="Imagen 3">
+            <img src="imagenes/Celulares/Xiaomi/Xiaomi Smart Band 7 Pro.jpg" alt="Imagen 4">
+
+            <!-- Segunda serie de imágenes (duplicada) -->
+            <img src="imagenes/celulares_promocion/iphone.jpg" alt="Imagen 1">
+            <img src="imagenes/celulares_promocion/iphone.jpg" alt="Imagen 2">
+            <img src="imagenes/img2.png" alt="Imagen 3">
+            <img src="imagenes/img1.png" alt="Imagen 4">
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Información de la Empresa -->
+            <div class="footer-section about">
+                <h3>Sobre LYCORIS</h3>
+                <p>LYCORIS es una tienda en línea especializada en gadgets y tecnología. Ofrecemos productos de las
+                    mejores marcas, garantizando calidad e innovación en cada artículo.</p>
+                <p>Nuestra misión es proporcionar a nuestros clientes una experiencia de compra única, con el mejor
+                    servicio y una amplia variedad de productos de última tecnología.</p>
+            </div>
+
+            <!-- Enlaces Rápidos -->
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="celulares.html">Celulares</a></li>
+                    <li><a href="tablets.html">Tablets</a></li>
+                    <li><a href="gadgets.html">Gadgets</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="politicas.html">Política de Privacidad</a></li>
+                    <li><a href="terminos.html">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div class="footer-section contact">
+                <h3>Contáctanos</h3>
+                <p><i class="fa fa-map-marker"></i> Calle Falsa 123, Ciudad Ejemplo, País</p>
+                <p><i class="fa fa-phone"></i> Teléfono: +123 456 7890</p>
+                <p><i class="fa fa-envelope"></i> Email: contacto@lycoris.com</p>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <a href="#"><i class="fa fa-facebook"></i> Facebook</a>
+                <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fa fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LYCORIS - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="java/javaScript.js"></script>
+    <script src="java/javaCarrito.js"></script>
+    <script src="java/javaComprar.js"></script>
+
+
+      <script>
+    const toggleSwitch = document.getElementById('mode-toggle');
+    const body = document.body;
+
+    // Cargar el tema inicial desde localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.remove('light-mode');
+      body.classList.add('dark-mode');
+      toggleSwitch.checked = true;
+    }
+
+    // Cambiar tema al alternar el interruptor
+    toggleSwitch.addEventListener('change', () => {
+      if (toggleSwitch.checked) {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark'); // Guardar en localStorage
+      } else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light'); // Guardar en localStorage
+      }
+    });
+  </script>
+
+<script>
+    // Comprobar si hay un usuario logueado
+    document.addEventListener("DOMContentLoaded", function () {
+      const user = localStorage.getItem("loggedInUser");
+      const userSection = document.getElementById("user-section");
+      const loginLink = document.getElementById("login-link");
+      const userInfo = document.getElementById("user-info");
+      const usernameDisplay = document.getElementById("username-display");
+      const logoutLink = document.getElementById("logout-link");
+  
+      if (user) {
+        const userData = JSON.parse(user);
+        loginLink.style.display = "none";
+        userInfo.style.display = "inline";
+        usernameDisplay.textContent = userData.username;
+      } else {
+        loginLink.style.display = "inline";
+        userInfo.style.display = "none";
+      }
+  
+      logoutLink.addEventListener("click", function () {
+        localStorage.removeItem("loggedInUser");
+        window.location.reload();
+      });
+    });
+  </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+        const authSection = document.querySelector('.auth');
+
+        if (loggedInUser) {
+            authSection.innerHTML = `
+                <span>Hola, ${loggedInUser.nombre}</span>
+                <a href="#" id="logout" class="btn">Cerrar Sesión</a>
+            `;
+
+            // Añadir evento para cerrar sesión
+            document.getElementById('logout').addEventListener('click', () => {
+                localStorage.removeItem('loggedInUser');
+                alert('Sesión cerrada correctamente.');
+                window.location.reload();
+            });
+        }
+    });
+</script>
+
+<script src="java/init.js"></script>
+<script src="java/javaCarrito.js"></script>
+<script src="java/javaComprar.js"></script>
+
+</body>
+</html>

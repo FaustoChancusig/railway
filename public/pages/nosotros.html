@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Tienda MobileMax</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">Mobile-Max</a>
+            
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="../menu.png" alt="menu" class="menu-i">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="celulares.html">Celulares</a></li>
+                    <li><a href="tablets.html">Tablets</a></li>
+                    <li><a href="gatgets.html">Gadgets</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="../car.svg" id="img-carrito" alt="carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-content container">
+            <div class="header-img">
+                <img src="imagenes/img1.png" alt="">
+            </div>
+            <div class="header-txt">
+                <h1>Ofertas especiales</h1>
+                <p>Estrena los mejores productos del mercado</p>
+                <a href="#" class="btn-1">Información</a>
+            </div>
+        </div>
+    </header>    
+
+    <!-- Sección Nosotros -->
+    <section class="about-us">
+        <h2>Sobre Nosotros</h2>
+        <p>En MobileMax, nos especializamos en ofrecer los mejores gadgets y dispositivos tecnológicos de última generación. Nuestro compromiso es llevar la tecnología más avanzada y de las mejores marcas a nuestros clientes, asegurando calidad, innovación y una experiencia de compra excepcional.</p>
+
+        <div class="mission-vision">
+            <div class="mission">
+                <h3>Misión</h3>
+                <p>Nuestra misión es proporcionar productos tecnológicos de alta calidad, facilitando el acceso a las últimas innovaciones en gadgets y dispositivos, mejorando la vida diaria de nuestros clientes y ayudándolos a mantenerse conectados y eficientes.</p>
+            </div>
+            <div class="vision">
+                <h3>Visión</h3>
+                <p>Ser líderes en el mercado de tecnología en línea, reconocidos por nuestra confiabilidad, excelencia en el servicio y la amplia variedad de productos que ofrecemos, siempre adaptándonos a las necesidades de un mundo en constante evolución tecnológica.</p>
+            </div>
+        </div>
+
+        <h3>Valores</h3>
+        <ul class="values">
+            <li><strong>Innovación:</strong> Nos mantenemos al día con las tendencias y avances en tecnología.</li>
+            <li><strong>Calidad:</strong> Seleccionamos productos de alta calidad para asegurar la satisfacción de nuestros clientes.</li>
+            <li><strong>Integridad:</strong> Operamos con transparencia y honestidad en cada aspecto de nuestro negocio.</li>
+            <li><strong>Compromiso:</strong> Estamos comprometidos con la excelencia en el servicio al cliente.</li>
+            <li><strong>Responsabilidad Social:</strong> Creemos en el impacto positivo de la tecnología y buscamos ser una fuerza para el bien.</li>
+        </ul>
+
+        <h3>Nuestro Equipo</h3>
+        <p>En MobileMax, contamos con un equipo diverso y dedicado, apasionado por la tecnología y comprometido a brindar el mejor servicio. Nuestro equipo de profesionales trabaja incansablemente para ofrecer una experiencia de compra única y personalizada.</p>
+
+        <div class="team">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Nombre del Miembro">
+                <h4>Juan Pérez</h4>
+                <p>CEO y Fundador</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Nombre del Miembro">
+                <h4>María García</h4>
+                <p>Gerente de Marketing</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Nombre del Miembro">
+                <h4>Carlos Sánchez</h4>
+                <p>Jefe de Tecnología</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="about-us">
+        <h2>Sobre Nosotros</h2>
+        <p>
+            En MobileMax, nos especializamos en ofrecer los mejores gadgets y dispositivos tecnológicos de última generación.
+        </p>
+    
+        <!-- Contenedor del video -->
+        <div class="video-container">
+            <video id="video" width="100%" poster="poster-image.jpg">
+                <source src="../video.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+    
+            <!-- Controles personalizados -->
+            <div class="video-controls">
+                <button id="play-pause" class="control-btn">▶</button>
+                <input type="range" id="progress-bar" min="0" max="100" value="0" step="0.1">
+                <button id="mute-unmute" class="control-btn">🔊</button>
+                <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>Sobre MobileMax</h3>
+                <p>MobileMax es una tienda en línea especializada en gadgets y tecnología. Ofrecemos productos de las mejores marcas, garantizando calidad e innovación en cada artículo.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="celulares.html">Celulares</a></li>
+                    <li><a href="tablets.html">Tablets</a></li>
+                    <li><a href="gadgets.html">Gadgets</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contáctanos</h3>
+                <p><i class="fa fa-map-marker"></i> Calle Falsa 123, Ciudad Ejemplo, País</p>
+                <p><i class="fa fa-phone"></i> Teléfono: +123 456 7890</p>
+                <p><i class="fa fa-envelope"></i> Email: contacto@MobileMax.com</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <a href="#"><i class="fa fa-facebook"></i> Facebook</a>
+                <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fa fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MobileMax - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+<script src="../java/javaScript.js"></script>
+</body>
+</html>
